@@ -1161,6 +1161,7 @@ class ConfigurableTask(Task):
                                 )
                             if isinstance(result_score, dict):
                                 # TODO: this handles the case where HF evaluate returns a dict.
+                                print(result_score)
                                 result_score = result_score[metric]
                             scores.append(result_score)
                         if any(scores):
@@ -1178,6 +1179,7 @@ class ConfigurableTask(Task):
                         result_score = self._metric_fn_list[metric]([gold, result])
                     if isinstance(result_score, dict):
                         # TODO: this handles the case where HF evaluate returns a dict.
+                        print(result_score)
                         result_score = result_score[metric]
                 result_dict[metric] = result_score
         else:

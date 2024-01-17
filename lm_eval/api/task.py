@@ -1180,7 +1180,7 @@ class ConfigurableTask(Task):
                     if isinstance(result_score, dict):
                         # TODO: this handles the case where HF evaluate returns a dict.
                         print(result_score)
-                        result_score = result_score[metric]
+                        # result_score = result_score[metric]
                 result_dict[metric] = result_score
         else:
             raise ValueError(
